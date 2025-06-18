@@ -1,88 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tanya's Mini Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Enhanced Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Enable Tailwind dark mode via class
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    html.dark {
+      background-color: #111827;
+      color: #e5e7eb;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Header -->
-  <header class="bg-indigo-700 text-white text-center py-10">
-    <h1 class="text-4xl font-bold">Tanya</h1>
-    <p class="mt-2 text-lg">Curious learner | Aspiring Web Developer | Lover of art & books</p>
-  </header>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition duration-300">
 
-  <!-- Profile Image -->
-  <div class="flex justify-center mt-6">
-    <img src="https://via.placeholder.com/150" alt="Profile Photo"
-         class="w-36 h-36 rounded-full border-4 border-indigo-700 object-cover" />
-  </div>
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center bg-blue-600 text-white p-4 shadow-md dark:bg-blue-800">
+    <h1 class="text-2xl font-bold">MyPortfolio</h1>
+    <div class="flex gap-4 items-center">
+      <a href="#projects" class="hover:text-gray-200">Projects</a>
+      <a href="#about" class="hover:text-gray-200">About</a>
+      <a href="#contact" class="hover:text-gray-200">Contact</a>
+      <!-- Dark Mode Toggle -->
+      <button onclick="document.documentElement.classList.toggle('dark')" class="bg-white text-blue-600 dark:bg-gray-800 dark:text-white px-2 py-1 rounded">
+        Toggle 🌙
+      </button>
+    </div>
+  </nav>
 
-  <!-- Hobbies Section -->
-  <section class="max-w-4xl mx-auto bg-white p-6 mt-8 rounded-xl shadow-md">
-    <h2 class="text-2xl font-semibold text-indigo-700 border-b pb-2 mb-4">Hobbies & Interests</h2>
-    <ul class="list-disc list-inside space-y-2 text-lg">
-      <li>Sketching and painting</li>
-      <li>Exploring nature and photography</li>
-      <li>Reading fiction and self-help books</li>
-      <li>Learning to code and build creative projects</li>
-    </ul>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-4">Hi, I'm Tanya 👋</h2>
+    <p class="text-lg max-w-xl">Passionate about software, AI/ML, and web development. Let's build something amazing!</p>
+    <a href="#projects" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">View My Work</a>
   </section>
 
-  <!-- Projects Section -->
-  <section class="max-w-4xl mx-auto bg-white p-6 mt-8 rounded-xl shadow-md">
-    <h2 class="text-2xl font-semibold text-indigo-700 border-b pb-2 mb-4">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-4 text-lg">
-      <div class="bg-indigo-50 p-4 rounded-md">Personal Blog Website (Coming Soon)</div>
-      <div class="bg-indigo-50 p-4 rounded-md">To-Do List App (HTML/CSS/JS)</div>
-      <div class="bg-indigo-50 p-4 rounded-md">Quote Generator with API</div>
-      <div class="bg-indigo-50 p-4 rounded-md">Simple Portfolio Page (This one!)</div>
+  <!-- Projects Grid -->
+  <section id="projects" class="py-16 px-6 bg-white dark:bg-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Project Card 1 -->
+      <a href="https://github.com/yourusername/project1" target="_blank" class="bg-gray-200 p-4 rounded shadow hover:shadow-xl transition dark:bg-gray-700" data-aos="zoom-in">
+        <h3 class="font-semibold text-xl mb-2">Project One</h3>
+        <p>Live Demo on GitHub →</p>
+      </a>
+
+      <!-- Project Card 2 -->
+      <a href="https://github.com/yourusername/project2" target="_blank" class="bg-gray-200 p-4 rounded shadow hover:shadow-xl transition dark:bg-gray-700" data-aos="zoom-in">
+        <h3 class="font-semibold text-xl mb-2">Project Two</h3>
+        <p>Live Demo on GitHub →</p>
+      </a>
+
+      <!-- Project Card 3 with Modal Trigger -->
+      <div onclick="openModal('Project Three', 'A brief modal preview of this project.')" class="bg-gray-200 p-4 rounded shadow hover:shadow-xl cursor-pointer dark:bg-gray-700" data-aos="zoom-in">
+        <h3 class="font-semibold text-xl mb-2">Project Three</h3>
+        <p>Click to Preview</p>
+      </div>
     </div>
   </section>
 
-  <!-- Skills Table -->
-  <section class="max-w-4xl mx-auto bg-white p-6 mt-8 rounded-xl shadow-md">
-    <h2 class="text-2xl font-semibold text-indigo-700 border-b pb-2 mb-4">Skills / Tools I Want to Learn</h2>
-    <div class="overflow-x-auto">
-      <table class="table-auto w-full border-collapse border border-gray-300">
-        <thead class="bg-indigo-100">
-          <tr>
-            <th class="border px-4 py-2">Skill</th>
-            <th class="border px-4 py-2">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-4 py-2">HTML & CSS</td>
-            <td class="border px-4 py-2">Learning</td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">JavaScript</td>
-            <td class="border px-4 py-2">Basics Done</td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">React JS</td>
-            <td class="border px-4 py-2">Planned</td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">Git & GitHub</td>
-            <td class="border px-4 py-2">Learning</td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">UI/UX Design</td>
-            <td class="border px-4 py-2">Exploring</td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 bg-gray-50 dark:bg-gray-900">
+    <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">About Me</h2>
+    <div class="flex flex-col md:flex-row items-center md:justify-between gap-10 max-w-4xl mx-auto">
+      <img src="https://via.placeholder.com/200" alt="My Photo" class="rounded-full shadow-md" data-aos="fade-right" />
+      <div data-aos="fade-left">
+        <p class="text-lg">
+          I'm an engineering student who loves creating beautiful user interfaces and exploring intelligent algorithms. I also contribute to open source and love collaborating with other tech enthusiasts!
+        </p>
+      </div>
     </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 bg-white dark:bg-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Contact Me</h2>
+    <form class="max-w-xl mx-auto space-y-4" data-aos="fade-up">
+      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded dark:bg-gray-700 dark:border-gray-600" />
+      <input type="email" placeholder="Your Email" class="w-full p-3 border rounded dark:bg-gray-700 dark:border-gray-600" />
+      <textarea placeholder="Your Message" rows="5" class="w-full p-3 border rounded dark:bg-gray-700 dark:border-gray-600"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Send</button>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 mt-10 py-6">
-    Made with ❤️ by Tanya Sinha | 2025
+  <footer class="text-center p-6 bg-blue-600 text-white dark:bg-blue-800">
+    © 2025 Tanya Sinha. All rights reserved.
   </footer>
 
+  <!-- Modal (hidden by default) -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-md text-center w-96">
+      <h3 id="modal-title" class="text-xl font-bold mb-4">Project Title</h3>
+      <p id="modal-body" class="mb-4">Project description...</p>
+      <button onclick="closeModal()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function openModal(title, desc) {
+      document.getElementById("modal-title").innerText = title;
+      document.getElementById("modal-body").innerText = desc;
+      document.getElementById("modal").classList.remove("hidden");
+    }
+
+    function closeModal() {
+      document.getElementById("modal").classList.add("hidden");
+    }
+  </script>
 </body>
 </html>
