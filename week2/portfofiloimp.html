@@ -17,12 +17,44 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+   body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .profile-img {
+            display: block;
+            margin: 30px auto 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #2c3e50;
+        }
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+            font-size: 16px;
+        }
+        .projects li {
+            margin-bottom: 8px;
+        }
 
     html.dark {
-      background-color: #1e293b;
+      background-color: hwb(215 11% 82%);
       color: #e2e8f0;
     }
 
@@ -41,6 +73,55 @@
     .dark .custom-card {
       background-color: #475569;
     }
+    .section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .projects li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #777;
+        }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
@@ -49,16 +130,16 @@
   <header class="custom-header text-white text-center py-10 px-4">
     <h1 class="text-4xl font-bold">Tanya</h1>
     <p class="text-lg mt-2">Curious learner | Aspiring Web Developer | Lover of art & books</p>
+    <!-- Profile Image -->
+
     <button onclick="document.documentElement.classList.toggle('dark')" class="mt-4 px-4 py-2 bg-white text-blue-800 rounded hover:bg-blue-100">
       Toggle Dark Mode 🌙
     </button>
   </header>
-
-  <!-- Profile Image -->
-  <img src="https://via.placeholder.com/150" alt="Tanya's Photo" class="w-36 h-36 rounded-full border-4 border-gray-700 mx-auto my-6 shadow-md" data-aos="fade-up">
+   <img src="c:\Users\sinha\Desktop\favourtite.jpg" alt="Profile Photo" class="profile-img">
 
   <!-- Hobbies Section -->
-  <section class="section custom-section max-w-3xl mx-auto my-8 p-6 rounded-lg shadow-md" data-aos="fade-up">
+  <div class="section custom-section max-w-3xl mx-auto my-8 p-6 rounded-lg shadow-md" data-aos="fade-up">
     <h2 class="text-2xl font-semibold text-[#2c3e50] dark:text-white border-b pb-2 mb-4">Hobbies & Interests</h2>
     <ul class="list-disc list-inside text-lg space-y-2">
       <li>Sketching and painting</li>
@@ -66,16 +147,17 @@
       <li>Reading fiction and self-help books</li>
       <li>Learning to code and build creative projects</li>
     </ul>
-  </section>
+  </div>
 
   <!-- Projects Section -->
   <section class="section custom-section max-w-3xl mx-auto my-8 p-6 rounded-lg shadow-md" data-aos="fade-up">
     <h2 class="text-2xl font-semibold text-[#2c3e50] dark:text-white border-b pb-2 mb-4">Projects</h2>
     <ul class="space-y-3 text-lg">
       <li><a href="#" class="text-blue-600 dark:text-blue-300 hover:underline">Personal Blog Website (Coming Soon)</a></li>
-      <li><a href="https://github.com/yourusername/todo-app" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">To-Do List App (HTML/CSS/JS)</a></li>
-      <li><a href="https://github.com/yourusername/quote-generator" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">Quote Generator with API</a></li>
-      <li><button onclick="openModal()" class="text-blue-600 dark:text-blue-300 hover:underline">Simple Portfolio Page (Click to preview)</button></li>
+      <li><a href="https://github.com/Tanya-0911/moon.git" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">Find moon on any specific day</a></li>
+      <li><a href="#" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">Spotify with API (Coming Soon)</a></li>
+      <li><a href="#" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">Quote Generator with API</a></li>
+      <li><button onclick="window.open('file:///C:/Users/sinha/Desktop/MY%20CODE/web-development-bootcamp/week2/portfofiloimp.html#', '_blank');openModal()" class="text-blue-600 dark:text-blue-300 hover:underline">Simple Portfolio Page (Click to preview)</button></li>
     </ul>
   </section>
 
@@ -98,6 +180,22 @@
       </tbody>
     </table>
   </section>
+<!-- Contact Section -->
+<section class="section custom-section max-w-3xl mx-auto my-8 p-6 rounded-lg shadow-md" data-aos="fade-up">
+  <h2 class="text-2xl font-semibold text-[#2c3e50] dark:text-white border-b pb-2 mb-4">Contact Me</h2>
+  <p class="text-lg mb-4">Feel free to connect with me on any of the platforms below:</p>
+  <div class="flex justify-center gap-8 text-2xl">
+    <a href="https://www.instagram.com/tanyaa_sinha09/" target="_blank" class="hover:text-pink-600" title="Instagram">
+      📷 Instagram
+    </a><br>
+    <a href="https://www.linkedin.com/in/tanya-882722316/" target="_blank" class="hover:text-blue-600" title="LinkedIn">
+      💼 LinkedIn
+    </a><br>
+    <a href="https://github.com/Tanya-0911" target="_blank" class="hover:text-gray-800 dark:hover:text-gray-300" title="GitHub">
+      💻 GitHub
+    </a>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="text-center py-6 text-gray-600 dark:text-gray-400">
@@ -105,13 +203,14 @@
   </footer>
 
   <!-- Modal (Project Preview) -->
-  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+  <footer id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
     <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg text-center w-80">
       <h3 class="text-xl font-semibold mb-4">Simple Portfolio Page</h3>
       <p>This is the portfolio page you're currently viewing. Designed with HTML, CSS, and enhanced with Tailwind, AOS & dark mode features.</p>
-      <button onclick="closeModal()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+      
+      <button onclick="window.open('https://github.com/Tanya-0911/web-development-bootcamp.git', '_blank');closeModal()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
     </div>
-  </div>
+  </footer>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
