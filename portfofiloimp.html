@@ -1,72 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tanya's Mini Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-<body class="bg-gray-100 text-gray-800">
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md p-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold">MyPortfolio</h1>
-    <div class="space-x-4">
-      <a href="#about" class="hover:text-blue-500">About</a>
-      <a href="#projects" class="hover:text-blue-500">Projects</a>
-      <a href="#contact" class="hover:text-blue-500">Contact</a>
-    </div>
-  </nav>
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white text-center py-10">
+    <h1 class="text-4xl font-bold">Tanya</h1>
+    <p class="mt-2 text-lg">Curious learner | Aspiring Web Developer | Lover of art & books</p>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center text-center py-20 bg-blue-100">
-    <h2 class="text-4xl font-bold mb-4">Hi, I'm Tanya</h2>
-    <p class="text-lg max-w-xl">A passionate developer who builds cool and responsive web apps.</p>
-  </section>
+  <!-- Profile Image -->
+  <div class="flex justify-center mt-6">
+    <img src="https://via.placeholder.com/150" alt="Profile Photo"
+         class="w-36 h-36 rounded-full border-4 border-indigo-700 object-cover" />
+  </div>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 px-4 md:px-16 bg-white">
-    <h2 class="text-3xl font-semibold mb-6">About Me</h2>
-    <p class="max-w-3xl text-lg leading-relaxed">
-      I'm currently studying ECE and learning web development, AI/ML, and app design. I love turning ideas into real-world projects with clean code and great UI/UX.
-    </p>
+  <!-- Hobbies Section -->
+  <section class="max-w-4xl mx-auto bg-white p-6 mt-8 rounded-xl shadow-md">
+    <h2 class="text-2xl font-semibold text-indigo-700 border-b pb-2 mb-4">Hobbies & Interests</h2>
+    <ul class="list-disc list-inside space-y-2 text-lg">
+      <li>Sketching and painting</li>
+      <li>Exploring nature and photography</li>
+      <li>Reading fiction and self-help books</li>
+      <li>Learning to code and build creative projects</li>
+    </ul>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16 px-4 md:px-16 bg-gray-100">
-    <h2 class="text-3xl font-semibold mb-6 text-center">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-bold mb-2">LazyLegs App</h3>
-        <p>A parcel pickup and redelivery app for when users are unavailable.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-bold mb-2">Netflix Data Cleaner</h3>
-        <p>Used Python and pandas to clean and analyze a Netflix dataset.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
-        <p>Fully responsive website using HTML, Tailwind CSS, and modern layout techniques.</p>
-      </div>
+  <section class="max-w-4xl mx-auto bg-white p-6 mt-8 rounded-xl shadow-md">
+    <h2 class="text-2xl font-semibold text-indigo-700 border-b pb-2 mb-4">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-4 text-lg">
+      <div class="bg-indigo-50 p-4 rounded-md">Personal Blog Website (Coming Soon)</div>
+      <div class="bg-indigo-50 p-4 rounded-md">To-Do List App (HTML/CSS/JS)</div>
+      <div class="bg-indigo-50 p-4 rounded-md">Quote Generator with API</div>
+      <div class="bg-indigo-50 p-4 rounded-md">Simple Portfolio Page (This one!)</div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 px-4 md:px-16 bg-white">
-    <h2 class="text-3xl font-semibold mb-6 text-center">Contact Me</h2>
-    <form class="max-w-xl mx-auto space-y-4">
-      <input type="text" placeholder="Name" class="w-full p-3 border border-gray-300 rounded-lg" required />
-      <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg" required />
-      <textarea placeholder="Your message..." rows="5" class="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
-      <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Send Message</button>
-    </form>
+  <!-- Skills Table -->
+  <section class="max-w-4xl mx-auto bg-white p-6 mt-8 rounded-xl shadow-md">
+    <h2 class="text-2xl font-semibold text-indigo-700 border-b pb-2 mb-4">Skills / Tools I Want to Learn</h2>
+    <div class="overflow-x-auto">
+      <table class="table-auto w-full border-collapse border border-gray-300">
+        <thead class="bg-indigo-100">
+          <tr>
+            <th class="border px-4 py-2">Skill</th>
+            <th class="border px-4 py-2">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">HTML & CSS</td>
+            <td class="border px-4 py-2">Learning</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">JavaScript</td>
+            <td class="border px-4 py-2">Basics Done</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">React JS</td>
+            <td class="border px-4 py-2">Planned</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Git & GitHub</td>
+            <td class="border px-4 py-2">Learning</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">UI/UX Design</td>
+            <td class="border px-4 py-2">Exploring</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 bg-gray-200">
-    &copy; 2025 Tanya Sinha. All rights reserved.
+  <footer class="text-center text-sm text-gray-500 mt-10 py-6">
+    Made with ❤️ by Tanya Sinha | 2025
   </footer>
-</body>
 
+</body>
 </html>
