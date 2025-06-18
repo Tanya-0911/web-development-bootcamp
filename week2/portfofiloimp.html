@@ -1,125 +1,232 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Enhanced Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Tanya's Enhanced Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Enable Tailwind dark mode via class
     tailwind.config = {
-      darkMode: 'class'
-    }
+      darkMode: 'class',
+    };
   </script>
-  <!-- AOS (Animate on Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
+   body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .profile-img {
+            display: block;
+            margin: 30px auto 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #2c3e50;
+        }
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+            font-size: 16px;
+        }
+        .projects li {
+            margin-bottom: 8px;
+        }
+
     html.dark {
-      background-color: #111827;
-      color: #e5e7eb;
+      background-color: hwb(215 11% 82%);
+      color: #e2e8f0;
     }
+
+    .custom-header {
+      background-color: #2c3e50;
+    }
+
+    .custom-section {
+      background-color: white;
+    }
+
+    .dark .custom-section {
+      background-color: #334155;
+    }
+
+    .dark .custom-card {
+      background-color: #475569;
+    }
+    .section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .projects li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #777;
+        }
   </style>
 </head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
 
-<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition duration-300">
+  <!-- Header -->
+  <header class="custom-header text-white text-center py-10 px-4">
+    <h1 class="text-4xl font-bold">Tanya</h1>
+    <p class="text-lg mt-2">Curious learner | Aspiring Web Developer | Lover of art & books</p>
+    <!-- Profile Image -->
 
-  <!-- Navbar -->
-  <nav class="flex justify-between items-center bg-blue-600 text-white p-4 shadow-md dark:bg-blue-800">
-    <h1 class="text-2xl font-bold">MyPortfolio</h1>
-    <div class="flex gap-4 items-center">
-      <a href="#projects" class="hover:text-gray-200">Projects</a>
-      <a href="#about" class="hover:text-gray-200">About</a>
-      <a href="#contact" class="hover:text-gray-200">Contact</a>
-      <!-- Dark Mode Toggle -->
-      <button onclick="document.documentElement.classList.toggle('dark')" class="bg-white text-blue-600 dark:bg-gray-800 dark:text-white px-2 py-1 rounded">
-        Toggle 🌙
-      </button>
-    </div>
-  </nav>
+    <button onclick="document.documentElement.classList.toggle('dark')" class="mt-4 px-4 py-2 bg-white text-blue-800 rounded hover:bg-blue-100">
+      Toggle Dark Mode 🌙
+    </button>
+  </header>
+   <img src="c:\Users\sinha\Desktop\favourtite.jpg" alt="Profile Photo" class="profile-img">
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4" data-aos="fade-up">
-    <h2 class="text-4xl font-bold mb-4">Hi, I'm Tanya 👋</h2>
-    <p class="text-lg max-w-xl">Passionate about software, AI/ML, and web development. Let's build something amazing!</p>
-    <a href="#projects" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">View My Work</a>
+  <!-- Hobbies Section -->
+  <div class="section custom-section max-w-3xl mx-auto my-8 p-6 rounded-lg shadow-md" data-aos="fade-up">
+    <h2 class="text-2xl font-semibold text-[#2c3e50] dark:text-white border-b pb-2 mb-4">Hobbies & Interests</h2>
+    <ul class="list-disc list-inside text-lg space-y-2">
+      <li>Sketching and painting</li>
+      <li>Exploring nature and photography</li>
+      <li>Reading fiction and self-help books</li>
+      <li>Learning to code and build creative projects</li>
+    </ul>
+  </div>
+
+  <!-- Projects Section -->
+  <section class="section custom-section max-w-3xl mx-auto my-8 p-6 rounded-lg shadow-md" data-aos="fade-up">
+    <h2 class="text-2xl font-semibold text-[#2c3e50] dark:text-white border-b pb-2 mb-4">Projects</h2>
+    <ul class="space-y-3 text-lg">
+      <li><a href="#" class="text-blue-600 dark:text-blue-300 hover:underline">Personal Blog Website (Coming Soon)</a></li>
+      <li><a href="https://github.com/Tanya-0911/moon.git" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">Find moon on any specific day</a></li>
+      <li><a href="#" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">Spotify with API (Coming Soon)</a></li>
+      <li><a href="#" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">Quote Generator with API</a></li>
+      <li><button onclick="window.open('file:///C:/Users/sinha/Desktop/MY%20CODE/web-development-bootcamp/week2/portfofiloimp.html#', '_blank');openModal()" class="text-blue-600 dark:text-blue-300 hover:underline">Simple Portfolio Page (Click to preview)</button></li>
+    </ul>
   </section>
 
-  <!-- Projects Grid -->
-  <section id="projects" class="py-16 px-6 bg-white dark:bg-gray-800">
-    <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Projects</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <!-- Project Card 1 -->
-      <a href="https://github.com/yourusername/project1" target="_blank" class="bg-gray-200 p-4 rounded shadow hover:shadow-xl transition dark:bg-gray-700" data-aos="zoom-in">
-        <h3 class="font-semibold text-xl mb-2">Project One</h3>
-        <p>Live Demo on GitHub →</p>
-      </a>
-
-      <!-- Project Card 2 -->
-      <a href="https://github.com/yourusername/project2" target="_blank" class="bg-gray-200 p-4 rounded shadow hover:shadow-xl transition dark:bg-gray-700" data-aos="zoom-in">
-        <h3 class="font-semibold text-xl mb-2">Project Two</h3>
-        <p>Live Demo on GitHub →</p>
-      </a>
-
-      <!-- Project Card 3 with Modal Trigger -->
-      <div onclick="openModal('Project Three', 'A brief modal preview of this project.')" class="bg-gray-200 p-4 rounded shadow hover:shadow-xl cursor-pointer dark:bg-gray-700" data-aos="zoom-in">
-        <h3 class="font-semibold text-xl mb-2">Project Three</h3>
-        <p>Click to Preview</p>
-      </div>
-    </div>
+  <!-- Skills Table -->
+  <section class="section custom-section max-w-3xl mx-auto my-8 p-6 rounded-lg shadow-md" data-aos="fade-up">
+    <h2 class="text-2xl font-semibold text-[#2c3e50] dark:text-white border-b pb-2 mb-4">Skills / Tools I Want to Learn</h2>
+    <table class="w-full text-center border border-gray-300 dark:border-gray-600 mt-4">
+      <thead>
+        <tr class="bg-gray-200 dark:bg-gray-700">
+          <th class="p-3 border border-gray-300 dark:border-gray-600">Skill</th>
+          <th class="p-3 border border-gray-300 dark:border-gray-600">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="p-3 border">HTML & CSS</td><td class="p-3 border">Learning</td></tr>
+        <tr><td class="p-3 border">JavaScript</td><td class="p-3 border">Basics Done</td></tr>
+        <tr><td class="p-3 border">React JS</td><td class="p-3 border">Planned</td></tr>
+        <tr><td class="p-3 border">Git & GitHub</td><td class="p-3 border">Learning</td></tr>
+        <tr><td class="p-3 border">UI/UX Design</td><td class="p-3 border">Exploring</td></tr>
+      </tbody>
+    </table>
   </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-16 px-6 bg-gray-50 dark:bg-gray-900">
-    <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">About Me</h2>
-    <div class="flex flex-col md:flex-row items-center md:justify-between gap-10 max-w-4xl mx-auto">
-      <img src="https://via.placeholder.com/200" alt="My Photo" class="rounded-full shadow-md" data-aos="fade-right" />
-      <div data-aos="fade-left">
-        <p class="text-lg">
-          I'm an engineering student who loves creating beautiful user interfaces and exploring intelligent algorithms. I also contribute to open source and love collaborating with other tech enthusiasts!
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 px-6 bg-white dark:bg-gray-800">
-    <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Contact Me</h2>
-    <form class="max-w-xl mx-auto space-y-4" data-aos="fade-up">
-      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded dark:bg-gray-700 dark:border-gray-600" />
-      <input type="email" placeholder="Your Email" class="w-full p-3 border rounded dark:bg-gray-700 dark:border-gray-600" />
-      <textarea placeholder="Your Message" rows="5" class="w-full p-3 border rounded dark:bg-gray-700 dark:border-gray-600"></textarea>
-      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Send</button>
-    </form>
-  </section>
+<!-- Contact Section -->
+<section class="section custom-section max-w-3xl mx-auto my-8 p-6 rounded-lg shadow-md" data-aos="fade-up">
+  <h2 class="text-2xl font-semibold text-[#2c3e50] dark:text-white border-b pb-2 mb-4">Contact Me</h2>
+  <p class="text-lg mb-4">Feel free to connect with me on any of the platforms below:</p>
+  <div class="flex justify-center gap-8 text-2xl">
+    <a href="https://www.instagram.com/tanyaa_sinha09/" target="_blank" class="hover:text-pink-600" title="Instagram">
+      📷 Instagram
+    </a><br>
+    <a href="https://www.linkedin.com/in/tanya-882722316/" target="_blank" class="hover:text-blue-600" title="LinkedIn">
+      💼 LinkedIn
+    </a><br>
+    <a href="https://github.com/Tanya-0911" target="_blank" class="hover:text-gray-800 dark:hover:text-gray-300" title="GitHub">
+      💻 GitHub
+    </a>
+  </div>
+</section>
 
   <!-- Footer -->
-  <footer class="text-center p-6 bg-blue-600 text-white dark:bg-blue-800">
-    © 2025 Tanya Sinha. All rights reserved.
+  <footer class="text-center py-6 text-gray-600 dark:text-gray-400">
+    Made with ❤️ by Tanya Sinha | 2025
   </footer>
 
-  <!-- Modal (hidden by default) -->
-  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-md text-center w-96">
-      <h3 id="modal-title" class="text-xl font-bold mb-4">Project Title</h3>
-      <p id="modal-body" class="mb-4">Project description...</p>
-      <button onclick="closeModal()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+  <!-- Modal (Project Preview) -->
+  <footer id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded shadow-lg text-center w-80">
+      <h3 class="text-xl font-semibold mb-4">Simple Portfolio Page</h3>
+      <p>This is the portfolio page you're currently viewing. Designed with HTML, CSS, and enhanced with Tailwind, AOS & dark mode features.</p>
+      
+      <button onclick="window.open('https://github.com/Tanya-0911/web-development-bootcamp.git', '_blank');closeModal()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
     </div>
-  </div>
+  </footer>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
 
-    function openModal(title, desc) {
-      document.getElementById("modal-title").innerText = title;
-      document.getElementById("modal-body").innerText = desc;
-      document.getElementById("modal").classList.remove("hidden");
+    function openModal() {
+      document.getElementById('modal').classList.remove('hidden');
+      document.getElementById('modal').classList.add('flex');
     }
 
     function closeModal() {
-      document.getElementById("modal").classList.add("hidden");
+      document.getElementById('modal').classList.add('hidden');
+      document.getElementById('modal').classList.remove('flex');
     }
   </script>
+
 </body>
 </html>
