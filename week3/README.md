@@ -17,9 +17,9 @@ This project helps you practice **DOM manipulation**, **event handling**, and ma
 ## 📁 Folder Structure
 
 to-do-list-app/
-├── index.html # Main HTML file
-├── style.css # Styling file
-├── script.js # JavaScript logic
+├── todo.html # Main HTML file
+├── todo.css # Styling file
+├── todo.js # JavaScript logic
 └── README.md # Project documentation
 
 
