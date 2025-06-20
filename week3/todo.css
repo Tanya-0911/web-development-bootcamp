@@ -113,15 +113,8 @@ button.delete {
 
 footer {
   text-align: center;
+  text-align: bottom;
   margin-top: 30px;
   color: #666;
   font-size: 14px;
-}
-
-
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
 }
