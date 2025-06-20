@@ -125,11 +125,3 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-
-body {
-  justify-content: flex-start;
-}
-
-.container {
-  flex: 1;
-}
