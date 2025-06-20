@@ -36,6 +36,8 @@ to-do-list-app/
 ## 🎨 UI Preview
 
 ![Screenshot (10)](https://github.com/user-attachments/assets/4003315a-6de7-4391-872b-a8ccf8c21c86)
+![Screenshot (11)](https://github.com/user-attachments/assets/5edc10bc-4684-4260-b802-1a76c7a80a6d)
+
 
 
 ---
