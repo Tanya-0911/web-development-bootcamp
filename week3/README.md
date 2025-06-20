@@ -1,7 +1,7 @@
 # 📝 To-Do List App
 
 A clean and minimal To-Do List web application built using **HTML**, **CSS**, and **JavaScript**.  
-This project helps you practice **DOM manipulation**, **event handling**, and managing **arrays/objects** in vanilla JavaScript.
+This project helps you practice **DOM manipulation**, **event handling**, and managing **arrays/objects** in JavaScript.
 
 ---
 
