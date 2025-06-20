@@ -110,3 +110,10 @@ button.delete {
   background: #4caf50;
   color: white;
 }
+
+footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #777;
+        }
