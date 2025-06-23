@@ -1,16 +1,19 @@
 # 📝 To-Do List App
 
-A clean and minimal To-Do List web application built using **HTML**, **CSS**, and **JavaScript**.  
+A vibrant and feature-rich To-Do List built with **HTML, CSS, and JavaScript** – no frameworks, just pure web magic! ✨
 This project helps you practice **DOM manipulation**, **event handling**, and managing **arrays/objects** in JavaScript.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Add new tasks
-- ✅ Mark tasks as complete/incomplete
-- ✅ Delete tasks
-- ✅ Filter by status: All, Completed, Pending
+✅ Add, complete, and delete tasks  
+✅ Set a **due date** for each task  
+✅ Assign **priority levels** (🧊 Low, ⚠️ Medium, 🔥 High)  
+✅ Filter tasks: All 📋 | Completed ✅ | Pending 🕓  
+✅ Smooth **fade animations** for deletion  
+✅ **Dark Mode toggle** 🌙  
+✅ Fully responsive and modern UI 
 
 ---
 
@@ -18,8 +21,8 @@ This project helps you practice **DOM manipulation**, **event handling**, and ma
 
 to-do-list-app/
 ├── todo.html # Main HTML file
-├── todo.css # Styling file
-├── todo.js # JavaScript logic
+├── todo.css # Styling with gradients, animations, dark mode
+├── todo.js # Javascript logic and DOM interactions
 └── README.md # Project documentation
 
 
@@ -35,8 +38,9 @@ to-do-list-app/
 
 ## 🎨 UI Preview
 
-![Screenshot (10)](https://github.com/user-attachments/assets/4003315a-6de7-4391-872b-a8ccf8c21c86)
-![Screenshot (11)](https://github.com/user-attachments/assets/5edc10bc-4684-4260-b802-1a76c7a80a6d)
+![Screenshot (12)](https://github.com/user-attachments/assets/d04600c2-c63d-44e6-bcf9-c76ec73bae94)
+
+![Screenshot (13)](https://github.com/user-attachments/assets/c18f879a-cc79-44c8-9167-07584e873dc1)
 
 
 
@@ -44,21 +48,26 @@ to-do-list-app/
 
 ## 📚 What I Learned
 
-- Manipulating the DOM using JavaScript
-- Handling user events (clicks, inputs)
-- Managing dynamic lists with arrays/objects
-- Building responsive UI without any libraries or frameworks
+Through building this project, I gained hands-on experience with:
+
+- **DOM Manipulation** – Creating, updating, and deleting elements dynamically using JavaScript.
+- **CSS Styling & Animation** – Designing responsive, modern UIs using gradients, transitions, and hover/fade effects.
+- **Dark Mode Toggling** – Using CSS variables and JavaScript to implement seamless theme switching.
+- 🎛**Filtering Logic** – Creating real-time task filters using array methods and dataset attributes.
+- **State Management** – Maintaining an array of task objects and updating the DOM accordingly.
+- **UI/UX Thinking** – Making the app not just functional but also beautiful, colorful, and fun to use!
+
+This project also reinforced best practices in writing clean, readable, and modular code, and it gave me a better understanding of how to structure a small-scale front-end application.
 
 ---
 
 ## ✨ Future Improvements
 
-- Store tasks in **localStorage** for persistence
-- Add **due dates** and **priority labels**
-- Drag-and-drop reordering
-- Responsive design improvements
-- Dark mode toggle
-
+- Add localStorage to persist tasks on reload
+- Convert into a PWA (Installable Web App)
+-  Edit existing tasks
+-  Add reminder notifications
+  
 ---
 
 ## 🧑‍💻 Author
