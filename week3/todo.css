@@ -1,50 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+  --light-bg: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  --dark-bg: linear-gradient(135deg, #232526 0%, #414345 100%);
+  --text-color: #333;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --dark-card-bg: rgba(0, 0, 0, 0.4);
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
+  font-family: 'Rubik', sans-serif;
+  background: var(--light-bg);
+  color: var(--text-color);
+  min-height: 100vh;
+  margin: 0;
+  padding: 50px 20px;
+  transition: background 0.4s ease;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 50px;
+}
+
+body.dark {
+  background: var(--dark-bg);
+  color: #f0f0f0;
 }
 
 .container {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease;
+}
+
+body.dark .container {
+  background: var(--dark-card-bg);
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
 }
 
 .input-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-#taskInput {
+.input-group input,
+.input-group select {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
 }
 
 #addBtn {
-  padding: 10px 20px;
+  padding: 12px 20px;
+  background: #00c9ff;
+  background: linear-gradient(to right, #92fe9d, #00c9ff);
+  color: white;
+  font-weight: bold;
   border: none;
-  background: #4caf50;
-  color: #fff;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0, 201, 255, 0.5);
 }
 
 #addBtn:hover {
-  background: #45a049;
+  transform: scale(1.05);
+}
+
+.filter-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.filter {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #ddd;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.filter.active {
+  background: #ff6a00;
+  color: white;
+  transform: scale(1.1);
 }
 
 ul {
@@ -53,60 +108,87 @@ ul {
 }
 
 li {
-  background: #f9f9f9;
-  margin-bottom: 10px;
-  padding: 12px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark li {
+  background: #333;
+  color: white;
 }
 
 li.completed {
   text-decoration: line-through;
-  color: #777;
-  background: #e0e0e0;
+  opacity: 0.6;
+}
+
+li.fade-out {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.task-meta {
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+
+.task-meta .priority {
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+.priority.High {
+  background: #ff4e50;
+  color: white;
+}
+
+.priority.Medium {
+  background: #f9d423;
+  color: black;
+}
+
+.priority.Low {
+  background: #32cd32;
+  color: white;
 }
 
 .actions {
+  margin-top: 10px;
   display: flex;
   gap: 10px;
 }
 
-button.delete,
-button.complete {
+button.complete,
+button.delete {
+  padding: 6px 12px;
   border: none;
-  padding: 6px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button.complete {
-  background: #2196f3;
+  background: rgb(108, 208, 197);
   color: white;
 }
 
 button.delete {
-  background: #f44336;
+  background: #ff6a6a;
   color: white;
 }
 
-.filter-group {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 15px;
+.toggle-dark-mode {
+  text-align: right;
+  margin-bottom: 10px;
 }
 
-.filter {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background: #ddd;
-}
-
-.filter.active {
-  background: #4caf50;
-  color: white;
+.toggle-dark-mode label {
+  font-weight: bold;
 }
