@@ -38,11 +38,9 @@ to-do-list-app/
 
 ## 🎨 UI Preview
 
-![Screenshot (12)](https://github.com/user-attachments/assets/d04600c2-c63d-44e6-bcf9-c76ec73bae94)
+![Screenshot (12)](https://github.com/user-attachments/assets/51362a7d-d966-45c0-94ae-065235ec3656)
 
-![Screenshot (13)](https://github.com/user-attachments/assets/c18f879a-cc79-44c8-9167-07584e873dc1)
-
-
+![Screenshot (13)](https://github.com/user-attachments/assets/5e192958-c902-4f71-b5e7-5586d66d4c9b)
 
 ---
 
@@ -53,7 +51,7 @@ Through building this project, I gained hands-on experience with:
 - **DOM Manipulation** – Creating, updating, and deleting elements dynamically using JavaScript.
 - **CSS Styling & Animation** – Designing responsive, modern UIs using gradients, transitions, and hover/fade effects.
 - **Dark Mode Toggling** – Using CSS variables and JavaScript to implement seamless theme switching.
-- 🎛**Filtering Logic** – Creating real-time task filters using array methods and dataset attributes.
+- **Filtering Logic** – Creating real-time task filters using array methods and dataset attributes.
 - **State Management** – Maintaining an array of task objects and updating the DOM accordingly.
 - **UI/UX Thinking** – Making the app not just functional but also beautiful, colorful, and fun to use!
 
