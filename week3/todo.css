@@ -194,16 +194,18 @@ button.delete {
 }
 
 .footer {
-  margin-top: 30px;
+  width: 100%;
   text-align: center;
+  padding: 15px 0;
   font-size: 1rem;
   color: #555;
-  opacity: 0.8;
-  animation: fadeInUp 1s ease-in-out;
+  margin-top: auto;
+  opacity: 0.9;
+  background: transparent;
 }
 
 body.dark .footer {
-  color: #ccc;
+  color: #bbb;
 }
 
 @keyframes fadeInUp {
