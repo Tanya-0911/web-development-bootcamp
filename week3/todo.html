@@ -3,26 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="todo.css"/>
+  <title>Colorful To-Do List</title>
+  <link rel="stylesheet" href="health2.css" />
 </head>
 <body>
   <div class="container">
-    <h1>To-Do List</h1>
+    <h1> My Personal To-Do List</h1>
+
+    <div class="toggle-dark-mode">
+      <label>
+        <input type="checkbox" id="darkToggle" /> 🌙 Dark Mode
+      </label>
+    </div>
+
     <div class="input-group">
-      <input type="text" id="taskInput" placeholder="Enter a new task" />
+      <input type="text" id="taskInput" placeholder="What's on your mind?" />
+      <input type="date" id="dueDate" />
+      <select id="priority">
+        <option value="Low">🧊 Low</option>
+        <option value="Medium" selected>⚠️ Medium</option>
+        <option value="High">🔥 High</option>
+      </select>
       <button id="addBtn">Add</button>
     </div>
-    
+
     <div class="filter-group">
-      <button data-filter="all" class="filter active">All</button>
-      <button data-filter="completed" class="filter">Completed</button>
-      <button data-filter="pending" class="filter">Pending</button>
+      <button data-filter="all" class="filter active">📋 All</button>
+      <button data-filter="completed" class="filter">✅ Completed</button>
+      <button data-filter="pending" class="filter">🕓 Pending</button>
     </div>
 
     <ul id="taskList"></ul>
   </div>
 
-  <script src="todo.js"></script>
+  <script src="health2.js"></script>
 </body>
 </html>
