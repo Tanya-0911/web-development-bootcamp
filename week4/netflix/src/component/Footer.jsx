@@ -46,7 +46,6 @@ function Footer() {
       
     </div>
     <div className=" mt-10">
-        <div>Netflix Norway</div>
         <div className="text-[12px]">
           This page is protected by Google reCAPTCHA to ensure you're not a bot.
           <span className="text-blue-500 underline">Learn more</span>.
